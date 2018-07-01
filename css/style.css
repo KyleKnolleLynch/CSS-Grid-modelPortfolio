@@ -1,0 +1,207 @@
+body,
+html {
+    margin: auto;
+    max-width: 1200px;
+    overflow: hidden;
+    background: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    background: linear-gradient(to left, #555, #000), url('/images/grid-model.jpg')no-repeat, rgba(0, 0, 0, 0.7)no-repeat;
+    background-blend-mode: color;
+    background-size: cover;
+    background-position: 20%;
+    height: 100vh;
+    max-width: 80%;
+    margin: auto;
+}
+
+.span-1 {
+    width: 20%;
+    height: 100vh;
+    background: #111;
+    float: right;
+}
+
+.grid-1 {
+    display: grid;
+    grid-template-columns: 12em 12em 12em;
+    grid-auto-rows: 12em;
+    justify-content: end;
+    padding-top: 20%;
+    z-index: 1;
+}
+
+.grid-1 div:nth-child(1) {
+    background: url('/images/grid-model.jpg');
+    background-size: cover;
+    grid-row: span 2;
+}
+
+.grid-1 div:nth-child(2) {
+    position: relative;
+    background: #f4f4f4;
+    color: #000;
+}
+
+.numbers h2, p {
+    padding-top: 1.5em;
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Great Vibes', sans-serif;
+}
+
+.grid-1 div:nth-child(3) {
+    background: #313131;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+.grid-1 div:nth-child(3) h5 {
+    position: relative;
+    top: 50%;
+    font-weight: lighter;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.grid-1 div:nth-child(4) {
+    background: #f4f4f4;
+    text-align: end;
+    padding: 2em;
+    color: #000;
+    grid-column: span 2;
+    position: relative;
+}
+
+.grid-1 div:nth-child(4) h4 {
+    font-family: 'Tangerine', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    padding: 0.5em;
+}
+
+.grid-1 div:nth-child(4) h5 {
+    font-family:'Ubuntu Condensed', sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+
+.subitem-1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    background-color: #717171;
+}
+
+.subitem-2 {
+    background: wheat;
+    width: 24em;
+    height: 2em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    justify-content: start;
+}
+
+.subitem-2 p {
+    font-size: 10px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+@media (max-width:960px) {
+    .grid-1 {
+        grid-template-columns: 10em 10em 10em;
+        grid-auto-rows: 10em;
+    }
+    .subitem-2 {
+        width: 20em;
+        height: 1.5em;
+    }
+    .numbers h2,
+    p {
+        padding-top: 1em;
+    }
+
+    .grid-1 div:nth-child(4) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        line-height: 0.8;
+    }
+
+}
+
+@media (max-width:768px) {
+    .grid-1 {
+        grid-template-columns: 8em 8em 8em;
+        grid-auto-rows: 8em;
+    }
+    .subitem-1 {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .subitem-2 {
+        width: 16em;
+        height: 1em;
+    }
+    .numbers h2,
+    p {
+        padding-top: .7em;
+    }
+
+    .grid-1 div:nth-child(3) h5 {
+        font-size: 8px;
+    } 
+  
+}
+
+@media (max-width:630px) {
+    .container {
+        min-width: 330px;
+    }
+    .grid-1 {
+        grid-template-columns: 6em 6em;
+        grid-auto-rows: 6em;
+        padding-top: 10%;
+        margin: 0;
+    }
+    .subitem-1 {
+        width: 1rem;
+        height: 1rem;
+    }
+    .subitem-2 {
+        width: 12em;
+        height: 0.7em;
+    }
+    .numbers h2,
+    p {
+        padding-top: 0.3em;
+        line-height: 1.1em;
+    }
+    .text h4, h5{
+       font-size: 12px;
+    }
+
+    .text h4 {
+       letter-spacing: 2px;        
+    }
+
+    .subitem-2 p {
+        font-size: 8px;
+    }
+
+}
