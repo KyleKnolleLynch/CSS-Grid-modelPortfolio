@@ -13,7 +13,7 @@ html {
 
 
 .container {
-    background: linear-gradient(to left, #555, #000), url('/images/grid-model.jpg')no-repeat, rgba(0, 0, 0, 0.7)no-repeat;
+    background: linear-gradient(to left, #555, #000), url('./images/grid-model.jpg')no-repeat, rgba(0, 0, 0, 0.7)no-repeat;
     background-blend-mode: color;
     background-size: cover;
     background-position: 20%;
@@ -39,7 +39,7 @@ html {
 }
 
 .grid-1 div:nth-child(1) {
-    background: url('/images/grid-model.jpg');
+    background: url('./images/grid-model.jpg');
     background-size: cover;
     grid-row: span 2;
 }
